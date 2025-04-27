@@ -1,0 +1,472 @@
+* {
+margin: 0;
+padding: 0;
+box-sizing: border-box;
+transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+body {
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+background-color: #faf8fc;
+}
+:root {
+   --bg-color: white;
+}
+
+.dark-mode button svg {
+  color: white;
+}
+
+button svg {
+  fill: var(--icon-color);
+  color: rgb(3, 3, 3);
+  width: 30px;
+  height: 34px;
+}
+
+#mode-toggle-btn {
+  cursor: pointer;
+  top: 8px;
+  right: 6px;
+  position: absolute;
+}
+
+
+p, .h4{
+  color: rgb(25, 25, 25);
+}
+
+.dark-mode .h4  {
+  color: rgb(219, 210, 210);
+}
+
+.dark-mode p {
+  color: rgb(219, 210, 210);
+  }
+
+.dark-mode body{
+  background-color: black;
+  color: rgb(219, 210, 210);
+}
+.dark-mode body  .landing-page > * {
+  background-color: inherit;
+}
+
+.landing-page {
+  background-color: inherit;
+  background-size: cover;
+  background-position: center;
+  display:flex;
+  flex-direction: column;
+ }
+ @keyframes bounceBack {
+  0%   { transform: scale(0.95); }
+  50%  { transform: scale(1.02); }
+  100% { transform: scale(1); }
+}
+a,
+ button,
+ .my-skills-section-buttons a button{
+  transition: transform 0.1s ease;
+  display: inline-block;
+ }
+ a,
+  button,
+ .my-skills-section-buttons a button:hover {
+  cursor: pointer;
+  transform: scale(1);
+ 
+ }
+ a,
+  button:active,
+.my-skills-section-buttons a button:active {
+  transform: scale(0.95);
+ transition: transform 0.3s ease;
+}
+
+ 
+ a img {
+  transition: transform 0.5s ease;
+}
+
+a:active img {
+  animation: bounceBack 0.8s ease;
+}
+
+ 
+ .header-section{
+  background-image:url('images/header-image.jpg ');
+  height:400px;
+  background-size: cover;
+  background-position: center;
+  position:relative;
+  display:flex;
+  justify-content: center;
+  align-items: center;
+  color: rgb(235, 232, 232);
+  }
+
+.overlay {
+  background-color:rgba(2, 2, 2, 0.332);
+width: 100%;
+height:100%;
+text-align: center;
+padding:2rem;
+display:flex;
+flex-direction: column;
+justify-content: center;
+align-items: center;
+}
+
+.dark-mode .header-section {
+  background-image: url('images/header-image.jpg ');;
+  background-color: black;
+  
+}
+.dark-mode .overlay{
+  background-color: rgba(0, 0, 0, 0.4);
+}
+body.dark-mode .call-to-action-button {
+  color:rgba(252, 250, 250, 0.866);
+}
+
+body.dark-mode .about-me-section,
+body.dark-mode .my-skills-section,
+body.dark-mode .portfolio-section,
+body.dark-mode .contacts-section,
+body.dark-mode .footer-section {
+  background-color: black;
+  color:rgb(252, 250, 250, 0.866);
+}
+
+/* Add any other dark-mode-specific styles here */
+
+.navigation-buttons
+{
+  position: absolute;
+  top: 10px;
+  right:60px;
+
+}
+
+.navigation-buttons button {
+  margin-left: 10px;
+  padding: 0.5rem 1rem;
+  border: none;
+  background-color: rgba(117, 115, 115, 0);
+  color: rgb(251, 246, 246);
+  font-weight: bold;
+  border-radius: 0;
+  cursor: pointer;
+}
+.navigation-buttons button:hover {
+  background-color: #ece4e41d;
+}
+
+
+.main-heading {
+  font-size: 2.5rem;
+  margin-bottom: 0.5rem;
+  animation: fadeSlideInRight 1.5s ease forwards;
+  opacity: 0;
+  
+}
+
+.sub-heading {
+  font-size: 1.5rem;
+  margin-bottom: 2rem;
+  margin-top: 0.1rem;
+  animation: fadeSlideInRight 1s ease forwards;
+  animation-delay: 0.5s;
+  opacity: 0;
+}
+ 
+
+@keyframes fadeSlideInRight {
+  from {
+    opacity: 0;
+    transform: translatex(-40px);
+  }
+  to {
+    opacity: 1;
+    transform: translatex(0);
+  }
+}
+@keyframes fadeInBounce {
+  0% {
+    opacity: 0;
+    transform: scale(0.8);
+  }
+  30% {
+    opacity: 1;
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(0.9);
+  }
+  70% {
+    transform: scale(1);
+  }
+  100% {
+    opacity: 1;
+    transform:scale(0.9);
+  }
+}
+
+
+.call-to-action-button {
+background-color: rgb(243, 51, 191);
+padding: 10px;
+border-style: solid;
+border-color: rgb(243, 51, 191);
+border-radius: 20px;
+color:rgb(219, 210, 210); 
+font-weight: bold;
+animation: fadeInBounce 1s ease-out forwards;
+animation-delay: 0.8s;
+opacity: 0;
+}
+.call-to-action-button:hover {
+  background-color: rgba(165, 4, 84, 0.426);
+}
+
+
+
+.dot-arrow-line {
+  font-size: 0; /* Remove spacing between inline elements */
+ gap: 1rem;
+}
+
+.dot {
+  display: inline-block;
+  width: 4px;
+  height: 4px;
+  background-color: rgba(0, 0, 0, 0.429);
+  border-radius: 50%;
+  margin: 0 4px;
+ }
+
+.arrow {
+  display: inline-block;
+  width: 0;
+  height: 0;
+  border-left: 6px solid transparent;
+  border-right: 6px solid transparent;
+  border-top: 8px solid rgba(0, 0, 0, 0.278);
+  transform: rotate(360deg); /* Makes the arrow point down */
+  margin: 0 4px;
+}
+
+.dark-mode .dot {
+  background-color: rgba(219, 210, 210, 0.74);
+}
+
+.dark-mode .arrow {
+  display: inline-block;
+  width: 0;
+  height: 0;
+  border-left: 6px solid transparent;
+  border-right: 6px solid transparent;
+  border-top: 8px solid rgba(219, 210, 210
+  );
+  transform: rotate(360deg); /* Makes the arrow point down */
+  margin: 0 4px;
+}
+
+.about-me-section {
+  position:relative;
+  display:flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: rgb(219, 210, 210);
+  padding: 2rem 1rem;
+  
+}
+.about-me-section h4 {
+  margin-bottom: 1rem; /* Space below the heading */
+  
+}
+
+.about-me-section .dot-arrow-line {
+  margin-bottom: 2rem; /* Space below the dots and arrow */
+}
+
+.portfolio-section  {
+  position:relative;
+  display:flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: rgb(219, 210, 210);
+  padding: 2rem 1rem;
+  }
+
+.portfolio-section h4{
+  margin-bottom: 1rem;
+}
+
+.portfolio-section .dot-arrow-line {
+  margin-bottom: 2rem;
+}
+
+.portfolio-images {
+  display:flex;
+  gap:3rem;
+}
+
+.portfolio-images img{
+  width:100%;
+  max-width: 300px;
+  height: 300px;
+
+}
+
+.image-grid {
+  display: flex;
+  gap: 20px;
+}
+
+.image-frame {
+  width: 200px;
+  height: 200px;
+  overflow: hidden;
+  border: 2px solid #eee5e5;
+  border-radius: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #ece4e4;
+}
+.image-frame:hover {
+  width: 205px;
+  border-color: rgb(165, 4, 84);
+ 
+}
+
+.image-frame img {
+  width: 100%;
+  max-width: 300px;
+  height: 300px;
+ object-fit: cover;
+}
+
+.my-skills-section {
+  position:relative;
+  display:flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: rgb(219, 210, 210);
+  padding: 2rem 1rem;
+}
+
+.my-skills-section h4 {
+  margin-bottom: 1rem;
+}
+
+.my-skills-section .dot-arrow-line {
+  margin-bottom: 2rem;
+}
+
+.my-skills-section-buttons {
+  display: flex;
+  gap: 2rem;
+  }
+
+.my-skills-section-buttons button{
+  background:   rgb(186, 90, 135);
+ width: 60px;
+ height:60px;
+ border-radius: 50px;
+ color:rgb(252, 250, 250);
+ font-weight:bold; 
+ font-size:medium;
+ border-style: solid;
+ border-color:   rgb(186, 90, 135); ;
+}
+.my-skills-section-buttons button:hover {
+  color: rgb(165, 4, 84);
+}
+.dark-mode .my-skills-section-buttons button {
+  background-color: rgb(213, 83, 148);
+}
+
+.contacts-sub-sections {
+  position:relative;
+  display:flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 35rem;
+ }
+
+.contacts-section {
+  position:relative;
+  display:flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.contacts-section h4 {
+  margin-bottom: 1rem;
+}
+
+.contacts-section .dot-arrow-line {
+margin-bottom: 2rem;
+}
+
+.telephone-section{
+  position: absolute;
+  top: 0rem; /* adjust as needed */
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.telephone {
+  
+  display: flex;
+  flex-direction: row;
+  gap: 0.1rem;
+}
+
+.email {
+  display: flex;
+  flex-direction: row;
+  gap:0.4rem;
+}
+
+.email-icon {
+  width: 27.3092px;
+  height: 17.9247px;
+  transform: translate(-3.55271e-15px, -1.77636e-15px) rotate(0deg);
+  object-fit: contain;
+}
+
+.social-media-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.youtube-icon{
+  width: 26.3092px;
+  height: 16.9247px;
+  transform: translate(-3.55271e-15px, -1.77636e-15px) rotate(0deg);
+  object-fit: contain;
+}
+
+.linkedin-icon{
+  width: 27.3092px;
+  height: 17.9247px;
+  transform: translate(-3.55271e-15px, -1.77636e-15px) rotate(0deg);
+  object-fit: contain;
+}
+
+.footer-section{
+  padding: 2rem 1rem;
+}
