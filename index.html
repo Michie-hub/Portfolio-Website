@@ -36,8 +36,10 @@
          
         </div>
         <h1 class="main-heading">Hi there!</h1>
-        <h2 class="sub-heading">My name is Michelle and I am a full stack developer</h2>
-        <a href="resume/Michelle_Nhengu_FullStack_Developer_Resume.pdf.pdf"><button id="download-btn" class="call-to-action-button ">Download the CV</button></a>
+        <h2 class="sub-heading">I'm Michelle, a Python Backend Developer building AI-powered cloud applications.
+        </h2>
+        
+        <a href="resume/Michelle_Nhengu_Resume.pdf"><button id="download-btn" class="call-to-action-button ">Download My Resume</button></a>
       </div>
     </div>
 
@@ -49,15 +51,34 @@
         <span class="dot"></span><span class="dot"></span><span class="dot"></span><span class="dot"></span>
       </p>
       </div>
-<p>A passionate Full Stack Web Developer and AI enthusiast. I love turning ideas into interactive, data-driven applications that blend logic, design, and intelligence.
+      <p>
+      I'm a Python Backend Developer with a strong focus on designing scalable APIs, cloud-native applications, and AI-powered software. I enjoy building backend systems that solve real-world problems by combining modern software engineering practices with machine learning and natural language processing.
 
-My projects range from building Flask-powered web apps and React dashboards to developing AI-based systems like a resume screener that uses NLP for smart document ranking. I’m also conducting research exploring Explainable AI (XAI) and Lightweight AI models for mobile and edge devices — bridging the gap between ethical and efficient AI.
+      My portfolio showcases projects including an Enterprise AI Recruitment Platform, an AI-powered Job Search & Resume Screening System, and a Flask-based technical blogging platform. Across these projects, I've worked with Python, FastAPI, Flask, PostgreSQL, SQL, Docker, AWS, Git, REST APIs, authentication, and NLP to develop secure, maintainable, and production-ready applications.
 
-I thrive on solving problems, learning emerging technologies, and creating tools that make tech more accessible and meaningful. When I’m not coding, you’ll probably find me experimenting with UI designs, improving model accuracy, or exploring new ideas that merge AI, automation, and web innovation.
+      I'm currently conducting research on how Natural Language Processing (NLP) influences resume screening and Applicant Tracking Systems (ATS), with a focus on improving candidate-job matching and intelligent document processing.
 
-Let’s connect — I’m always open to collaboration, new projects, and learning opportunities in AI, software engineering, and web development.</p>
+      I'm passionate about backend engineering, cloud technologies, automation, and continuously improving my software architecture and system design skills. I enjoy learning new technologies, contributing to meaningful projects, and building software that is scalable, reliable, and easy to maintain.
+
+      I'm currently seeking opportunities as a Python Backend Developer where I can contribute to building high-quality software while continuing to grow as an engineer.
+      </p>
+      <div class="tech-stack">
+
+<h3>Core Technologies</h3>
+<p>Languages: Python, SQL, JavaScript, Java
+
+Backend: FastAPI, Flask, REST APIs, SQLAlchemy
+
+Databases: PostgreSQL, MySQL, SQLite
+
+Cloud & DevOps: Docker, AWS (EC2, S3), GitHub Actions, Git
+
+AI: NLP, LangChain, OpenAI API, ChromaDB, spaCy
+
+Tools: Linux, Postman, VS Code</p></div>
+
     </div>
-
+    
     <div class="my-skills-section"> 
       <div id="my-skills"><h4 class="h4">My Skills</h4></div>
       <div><p class="dot-arrow-line">
@@ -66,14 +87,16 @@ Let’s connect — I’m always open to collaboration, new projects, and learni
         <span class="dot"></span><span class="dot"></span><span class="dot"></span><span class="dot"></span>
       </p>
       </div>
-      <div class="my-skills-section-buttons">
-        <a href="my skills/html-skill-set.html" ><button>HTML</button></a>
-        <a href="my skills/python-skill-set.html" ><button>.PY</button></a>
-        <a href="my skills/java-skill-set.html" ><button>JAVA</button></a>
-        <a href="my skills/git-skill-set.html" ><button>GIT</button></a>
-        <a href="my skills/js-skill-set.html" ><button>JS</button></a>
-        <a href="my skills/sql-skill-set.html" ><button>SQL</button></a>
-      </div>
+     <div class="my-skills-section-buttons">
+  <button class="skill-btn" data-tooltip="Python"><img src="icons/python.svg" alt="Python"></button>
+  <button class="skill-btn" data-tooltip="FastAPI"><img src="icons/fastapi.svg" alt="FastAPI"></button>
+  <button class="skill-btn skill-btn-flask" data-tooltip="Flask"><img src="icons/flask.svg" alt="Flask"></button>
+  <button class="skill-btn" data-tooltip="JavaScript"><img src="icons/javascript.svg" alt="JavaScript"></button>
+  <button class="skill-btn" data-tooltip="AWS"><img src="icons/aws.svg" alt="AWS"></button>
+  <button class="skill-btn" data-tooltip="Docker"><img src="icons/docker.svg" alt="Docker"></button>
+  <button class="skill-btn" data-tooltip="SQL"><img src="icons/postgresql.svg" alt="SQL"></button>
+  <button class="skill-btn" data-tooltip="Git"><img src="icons/git.svg" alt="Git"></button>
+</div>
     </div>
 
     <div class="portfolio-section"> 
@@ -85,9 +108,71 @@ Let’s connect — I’m always open to collaboration, new projects, and learni
       </p>
       </div>
       <div class="image-grid">
-        <div class="image-frame"><a href="https://tech-journal-u3wr.onrender.com"><img class="image-project1" src="images/techjournal.png" alt="Link to project 1"></a></div>
-        <div class="image-frame"><a href="https://resume-screener-1q48.onrender.com/"><img  class="image-project2"  src="images/resumescreener.png" alt="link to project 2"></a></div>
-        
+
+        <div class="project-card">
+          <div class="project-image">
+            <img src="images/enterprise_ai_platform.png" alt="Enterprise AI Recruitment Platform">
+          </div>
+          <h3>Enterprise AI Recruitment Platform</h3>
+          <p class="tech-stack-line">FastAPI &bull; PostgreSQL &bull; Docker &bull; ChromaDB</p>
+          <p class="project-description">
+            Recruitment platform with semantic candidate&ndash;job matching (Sentence
+            Transformer embeddings + ChromaDB), JWT/RBAC auth, Redis-backed rate
+            limiting, and a 127-test suite that caught a real privilege-escalation
+            bug pre-launch.
+          </p>
+          <div class="project-links">
+            <a href="https://resumematchai-1n5m.onrender.com/" target="_blank">
+              <button class="project-btn">Live Demo</button>
+            </a>
+            <a href="https://github.com/Michie-hub/recruitment-platform" target="_blank">
+              <button class="project-btn">GitHub</button>
+            </a>
+          </div>
+        </div>
+
+        <!-- TODO: title/description below are placeholders based on the link name —
+             the original file had this card duplicated from the recruitment platform
+             card verbatim. Replace with the real project name/description/tech stack. -->
+        <div class="project-card">
+          <div class="project-image">
+            <img src="images/techjournal.png" alt="Tech Journal">
+          </div>
+          <h3>Tech Journal</h3>
+          <p class="tech-stack-line">Flask &bull; PostgreSQL &bull; Docker</p>
+          <p class="project-description">
+            [Replace with a real description of this project.]
+          </p>
+          <div class="project-links">
+            <a href="https://tech-journal-u3wr.onrender.com" target="_blank">
+              <button class="project-btn">Live Demo</button>
+            </a>
+            <a href="https://github.com/Michie-hub/PersonalBlog" target="_blank">
+              <button class="project-btn secondary">GitHub</button>
+            </a>
+          </div>
+        </div>
+
+        <!-- TODO: same placeholder situation as above. -->
+        <div class="project-card">
+          <div class="project-image">
+            <img src="images/resumescreener.png" alt="Resume Screener">
+          </div>
+          <h3>Resume Screener</h3>
+          <p class="tech-stack-line">Python &bull; NLP</p>
+          <p class="project-description">
+            [Replace with a real description of this project.]
+          </p>
+          <div class="project-links">
+            <a href="https://resume-screener-1q48.onrender.com/" target="_blank">
+              <button class="project-btn">Live Demo</button>
+            </a>
+            <a href="#" target="_blank">
+              <button class="project-btn secondary">GitHub</button>
+            </a>
+          </div>
+        </div>
+
       </div>
     </div>
 
@@ -130,18 +215,23 @@ Let’s connect — I’m always open to collaboration, new projects, and learni
        
        <div class="social-media-section">
           <div>Social Media</div>
-          <div>
-            <a href="https://www.youtube.com/@MichelleNhengu" target="_blank"> <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512" width="40" height="20" fill="#ff1493">
-              <path d="M549.655 124.083c-6.281-23.65-24.787-42.157-48.437-48.437C458.119 64 288 64 288 64s-170.119 0-213.218 11.646c-23.65 6.281-42.156 24.787-48.437 48.437C16.7 167.182 16.7 256 16.7 256s0 88.818 9.646 131.917c6.281 23.65 24.787 42.157 48.437 48.437C117.881 448 288 448 288 448s170.119 0 213.218-11.646c23.65-6.281 42.156-24.787 48.437-48.437C559.3 344.818 559.3 256 559.3 256s0-88.818-9.645-131.917zM232 336V176l142.857 80L232 336z"/>
+          <div class="social-icon-wrapper" data-tooltip="YouTube">
+  <a href="https://www.youtube.com/@MichelleNhengu" target="_blank">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512" width="40" height="20" fill="#ff1493">
+      <path d="M549.655 124.083c-6.281-23.65-24.787-42.157-48.437-48.437C458.119 64 288 64 288 64s-170.119 0-213.218 11.646c-23.65 6.281-42.156 24.787-48.437 48.437C16.7 167.182 16.7 256 16.7 256s0 88.818 9.646 131.917c6.281 23.65 24.787 42.157 48.437 48.437C117.881 448 288 448 288 448s170.119 0 213.218-11.646c23.65-6.281 42.156-24.787 48.437-48.437C559.3 344.818 559.3 256 559.3 256s0-88.818-9.645-131.917zM232 336V176l142.857 80L232 336z"/>
+    </svg>
+  </a>
+</div>
+          <div class="social-icon-wrapper" data-tooltip="LinkedIn">
+          <a href="https://www.linkedin.com/in/michelle-nhengu-3b3362239" target="_blank">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="40" height="30" fill="#ff1493">
+              <circle cx="256" cy="256" r="256" fill="none"/>
+              <rect x="120" y="190" width="60" height="200"/>
+              <circle cx="150" cy="140" r="30"/>
+              <path d="M220 190h60v30c10-20 30-30 50-30 40 0 70 30 70 80v120h-60V280c0-20-10-30-30-30s-30 10-30 30v110h-60z"/>
             </svg>
-            </a></div>
-          <div><a href="https://www.linkedin.com/in/michelle-nhengu-3b3362239" target="_blank"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="40" height="30" fill="#ff1493">
-            <circle cx="256" cy="256" r="256" fill="none"/>
-            <rect x="120" y="190" width="60" height="200"/>
-            <circle cx="150" cy="140" r="30"/>
-            <path d="M220 190h60v30c10-20 30-30 50-30 40 0 70 30 70 80v120h-60V280c0-20-10-30-30-30s-30 10-30 30v110h-60z"/>
-          </svg>
-          </a></div>
+          </a>
+        </div>
         </div>
 
 

@@ -61,6 +61,7 @@ p, .h4{
   background-position: center;
   display:flex;
   flex-direction: column;
+
  }
  @keyframes bounceBack {
   0%   { transform: scale(0.95); }
@@ -283,7 +284,7 @@ opacity: 0;
   justify-content: center;
   align-items: center;
   color: rgb(219, 210, 210);
-  padding: 2rem 1rem;
+  padding: 4rem 1rem 2rem;
   
 }
 .about-me-section h4 {
@@ -294,7 +295,16 @@ opacity: 0;
 .about-me-section .dot-arrow-line {
   margin-bottom: 2rem; /* Space below the dots and arrow */
 }
+.about-me-section p {
+  text-align: center;
+  max-width: 700px;
+  margin-bottom: 1.5rem;
 
+}
+
+.about-me-section .tech-stack {
+  text-align: center;
+}
 .portfolio-section  {
   position:relative;
   display:flex;
@@ -302,7 +312,7 @@ opacity: 0;
   justify-content: center;
   align-items: center;
   color: rgb(219, 210, 210);
-  padding: 2rem 1rem;
+  padding: 4rem 1rem 2rem;
   }
 
 .portfolio-section h4{
@@ -325,34 +335,119 @@ opacity: 0;
 
 }
 
+/* ---- Project cards ---- */
+/* Replaces the old fixed-size .image-frame (200x200, whole card as one
+   link) with a proper card: image on top at a fixed aspect ratio, then
+   title / tech-stack line / description stacked below, then a row of
+   real buttons at the bottom. flex-wrap on the grid means this reflows
+   naturally instead of overflowing on narrow screens. */
+
 .image-grid {
   display: flex;
-  gap: 20px;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 2rem;
+  max-width: 1100px;
 }
 
-.image-frame {
-  width: 200px;
-  height: 200px;
-  overflow: hidden;
+.project-card {
+  width: 300px;
+  display: flex;
+  flex-direction: column;
   border: 2px solid #eee5e5;
   border-radius: 10px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  background-color: #ece4e4;
-}
-.image-frame:hover {
-  width: 205px;
-  border-color: rgb(165, 4, 84);
- 
+  background-color: #ffffff;
+  overflow: hidden;
+  text-align: left;
 }
 
-.image-frame img {
-  width: 100%;
-  max-width: 300px;
-  height: 300px;
- object-fit: cover;
+.project-card:hover {
+  border-color: rgb(165, 4, 84);
 }
+
+.project-card .project-image {
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  overflow: hidden;
+  background-color: #ece4e4;
+}
+
+.project-card .project-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.project-card h3 {
+  padding: 0.9rem 1rem 0.2rem;
+  font-size: 1.05rem;
+  color: rgb(25, 25, 25);
+}
+
+.project-card .tech-stack-line {
+  padding: 0 1rem;
+  font-size: 0.8rem;
+  font-weight: bold;
+  color: rgb(165, 4, 84);
+  margin: 0;
+}
+
+.project-card .project-description {
+  padding: 0.5rem 1rem 0;
+  font-size: 0.85rem;
+  line-height: 1.4;
+  color: rgb(60, 60, 60);
+  flex-grow: 1;
+  margin: 0;
+}
+
+.project-links {
+  display: flex;
+  gap: 0.6rem;
+  padding: 1rem;
+}
+
+.project-btn {
+  padding: 0.5rem 1rem;
+  border-radius: 20px;
+  font-weight: bold;
+  font-size: 0.85rem;
+  cursor: pointer;
+  border: 2px solid rgb(243, 51, 191);
+  background-color: rgb(243, 51, 191);
+  color: rgb(255, 255, 255);
+}
+
+.project-btn:hover {
+  background-color: rgba(165, 4, 84, 0.9);
+  border-color: rgba(165, 4, 84, 0.9);
+}
+
+.project-btn.secondary {
+  background-color: transparent;
+  color: rgb(243, 51, 191);
+}
+
+.project-btn.secondary:hover {
+  background-color: rgba(243, 51, 191, 0.1);
+  color: rgb(165, 4, 84);
+}
+
+.dark-mode .project-card {
+  background-color: rgb(20, 20, 20);
+  border-color: rgb(60, 60, 60);
+}
+
+.dark-mode .project-card h3 {
+  color: rgb(235, 232, 232);
+}
+
+.dark-mode .project-card .project-description {
+  color: rgb(200, 195, 195);
+}
+
+/* ---- End project cards ---- */
 
 .my-skills-section {
   position:relative;
@@ -361,7 +456,7 @@ opacity: 0;
   justify-content: center;
   align-items: center;
   color: rgb(219, 210, 210);
-  padding: 2rem 1rem;
+  padding: 4rem 1rem 2rem;
 }
 
 .my-skills-section h4 {
@@ -374,25 +469,76 @@ opacity: 0;
 
 .my-skills-section-buttons {
   display: flex;
-  gap: 2rem;
+  gap: 1.5rem;
+  flex-wrap: wrap;
+  justify-content: center;
   }
 
-.my-skills-section-buttons button{
-  background:   rgb(186, 90, 135);
- width: 60px;
- height:60px;
- border-radius: 50px;
- color:rgb(252, 250, 250);
- font-weight:bold; 
- font-size:medium;
- border-style: solid;
- border-color:   rgb(186, 90, 135); ;
+.skill-btn {
+  background: rgb(22, 21, 21);
+  width: 64px;
+  height: 64px;
+  border-radius: 50%;
+  border-style: solid;
+  border-color: rgb(9, 9, 9);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0;
+  position: relative; /* anchors the tooltip below to this button */
+
 }
-.my-skills-section-buttons button:hover {
-  color: rgb(165, 4, 84);
+
+.skill-btn img {
+  width: 36px;
+  height: 36px;
+  object-fit: contain;
 }
-.dark-mode .my-skills-section-buttons button {
-  background-color: rgb(213, 83, 148);
+
+/* The Flask logo is solid black — needs a light backing so it stays
+   visible against both the pink button background and dark mode,
+   instead of nearly disappearing. */
+.skill-btn-flask img {
+  background-color: rgb(176, 174, 174);
+  border-radius: 50%;
+  padding: 8px;
+  width: 36px;
+  height: 35px;
+  box-sizing: content-box;
+}
+
+.skill-btn:hover {
+  border: 3px solid rgb(165, 4, 84);
+  transform: scale(1.05);
+}
+
+
+.skill-btn::after {
+  content: attr(data-tooltip);
+  position: absolute;
+  top: 100%;
+  left: 80%;
+  transform: translateX(-50%);
+  background-color: rgba(20, 20, 20, 0.614);
+  color: #fff;
+  padding: 0.3rem 0.6rem;
+  border-radius: 6px;
+  font-size: 0.75rem;
+  font-weight: normal;
+  white-space: nowrap;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.15s ease;
+  pointer-events: none;
+}
+
+.skill-btn:hover::after {
+  opacity: 1;
+  visibility: visible;
+}
+.dark-mode .skill-btn {
+  background-color: rgb(15, 14, 14);
+  border-color: rgb(213, 83, 148);
 }
 
 .contacts-sub-sections {
@@ -410,6 +556,8 @@ opacity: 0;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  padding: 4rem 1rem 2rem;
+
 }
 
 .contacts-section h4 {
@@ -451,6 +599,42 @@ margin-bottom: 2rem;
   display: flex;
   flex-direction: column;
   align-items: center;
+}
+.social-icon-wrapper {
+  position: relative;
+  display: inline-block;
+}
+
+.social-icon-wrapper::after {
+  content: attr(data-tooltip);
+  position: absolute;
+  bottom: 115%;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: rgba(20, 20, 20, 0.9);
+  color: #fff;
+  padding: 0.3rem 0.6rem;
+  border-radius: 6px;
+  font-size: 0.75rem;
+  font-weight: normal;
+  white-space: nowrap;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.15s ease;
+  pointer-events: none;
+}
+
+.social-icon-wrapper:hover::after {
+  opacity: 1;
+  visibility: visible;
+}
+
+.social-icon-wrapper svg {
+  transition: transform 0.15s ease;
+}
+
+.social-icon-wrapper:hover svg {
+  transform: scale(1.15);
 }
 
 .youtube-icon{
